@@ -7,12 +7,12 @@ if ($metodo != "DELETE" && $metodo != "OPTIONS") {
 }
 
 if (empty($_GET["id"])) {
-    exit("No hay id de mascota para eliminar");
+    exit("No hay  para eliminar");
 }
 
 $id = $_GET["id"];
 $bd = include_once "conexion.php";
-$sentencia = $bd->prepare("DELETE FROM gasto_energico WHERE id = ?");
+$sentencia = $bd->prepare("DELETE FROM gastoenergico WHERE id = ?");
 $resultado = $sentencia->execute([$id]);
 echo json_encode($resultado);
 

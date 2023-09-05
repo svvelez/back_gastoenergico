@@ -10,7 +10,7 @@ if (!$jsonGasto) {
     exit("No hay datos");
 }
 $bd = include_once "conexion.php";
-$sentencia = $bd->prepare("UPDATE gasto_energico SET peso = ?, estatura = ?, edad = ?, genero = ? , actividad = ? WHERE id = ?");
+$sentencia = $bd->prepare("UPDATE gastoenergico SET peso = ?, estatura = ?, edad = ?, genero = ? , actividad = ? WHERE id = ?");
 $resultado = $sentencia->execute([$jsonGasto->peso, $jsonGasto->estatura, $jsonGasto->edad , $jsonGasto->genero, $jsonGasto->actividad , $jsonGasto->id]);
 echo json_encode($resultado);
 ?>
