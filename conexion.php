@@ -2,7 +2,7 @@
 
 $contraseña = "";
 $usuario = "root";
-$nombre_base_de_datos = "gasto_energico";
+$nombre_base_de_datos = "gastoenergico";
 try {
     return new PDO('mysql:host=localhost;dbname=' . $nombre_base_de_datos, $usuario, $contraseña);
 } catch (Exception $e) {
